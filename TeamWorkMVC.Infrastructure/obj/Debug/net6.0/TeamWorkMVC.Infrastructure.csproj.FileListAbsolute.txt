@@ -1,0 +1,17 @@
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\bin\Debug\net6.0\TeamWorkMVC.Infrastructure.deps.json
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\bin\Debug\net6.0\TeamWorkMVC.Infrastructure.runtimeconfig.json
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\bin\Debug\net6.0\TeamWorkMVC.Infrastructure.dll
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\bin\Debug\net6.0\TeamWorkMVC.Infrastructure.pdb
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\bin\Debug\net6.0\TeamWorkMVC.Domain.dll
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\bin\Debug\net6.0\TeamWorkMVC.Domain.pdb
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\obj\Debug\net6.0\TeamWorkMVC.Infrastructure.csproj.AssemblyReference.cache
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\obj\Debug\net6.0\TeamWorkMVC.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\obj\Debug\net6.0\TeamWorkMVC.Infrastructure.AssemblyInfoInputs.cache
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\obj\Debug\net6.0\TeamWorkMVC.Infrastructure.AssemblyInfo.cs
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\obj\Debug\net6.0\TeamWorkMVC.Infrastructure.csproj.CoreCompileInputs.cache
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\obj\Debug\net6.0\TeamWorkMVC.Infrastructure.csproj.CopyComplete
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\obj\Debug\net6.0\TeamWorkMVC.Infrastructure.dll
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\obj\Debug\net6.0\refint\TeamWorkMVC.Infrastructure.dll
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\obj\Debug\net6.0\TeamWorkMVC.Infrastructure.pdb
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\obj\Debug\net6.0\TeamWorkMVC.Infrastructure.genruntimeconfig.cache
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Infrastructure\obj\Debug\net6.0\ref\TeamWorkMVC.Infrastructure.dll
