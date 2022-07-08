@@ -38,7 +38,7 @@ public class TaskRepository : BaseRepository, ITaskRepository
 
     public int EditItem(Task model)
     {
-        _context.Attach(model);
+        _context.Tasks.Update(model);
         _context.SaveChanges();
         return model.Id;
     }

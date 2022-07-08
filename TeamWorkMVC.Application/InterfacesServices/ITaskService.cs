@@ -7,6 +7,7 @@ public interface ITaskService
     int AddTask(TaskCreateDTO model);
     IQueryable<TaskForListDTO> GetAllTasksForList();
     TaskDetailsDTO GetTaskById(int id);
+   
     TaskDetailsDTO GetTaskByProjectId(int id);
     TaskUpdateDTO GetTaskForEdit(int id);
     int EditTask(TaskUpdateDTO model);
