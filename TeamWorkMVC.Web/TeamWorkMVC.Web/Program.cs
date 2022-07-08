@@ -1,7 +1,12 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using TeamWorkMVC.Application.InterfacesServices;
+using TeamWorkMVC.Application.Mapping;
+using TeamWorkMVC.Application.Services;
+using TeamWorkMVC.Domain.InterfacesRepository;
 using TeamWorkMVC.Domain.Models;
 using TeamWorkMVC.Infrastructure;
+using TeamWorkMVC.Infrastructure.Repositores;
 
 /*
  * test@gmail.com
@@ -20,6 +25,11 @@ builder.Services.AddDefaultIdentity<AppUser>(options => options.SignIn.RequireCo
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<Context>();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+builder.Services.AddTransient<ITaskService, TaskService>();
+builder.Services.AddTransient<ITaskRepository, TaskRepository>();
+
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
@@ -47,6 +57,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 app.MapRazorPages();
 
 app.Run();
