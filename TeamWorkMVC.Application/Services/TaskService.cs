@@ -27,9 +27,10 @@ public class TaskService : ITaskService
 
     public IQueryable<TaskForListDTO> GetAllTasksForList()
     {
-        var tasks = _taskRepository.GetAllItems().ProjectTo<TaskForListDTO>(_mapper.ConfigurationProvider);
+        var tasks = _taskRepository.GetAllItems();
+        var tasksDTO = tasks.ProjectTo<TaskForListDTO>(_mapper.ConfigurationProvider);
         
-        return tasks;
+        return tasksDTO;
     }
 
     public TaskDetailsDTO GetTaskByProjectId(int id)

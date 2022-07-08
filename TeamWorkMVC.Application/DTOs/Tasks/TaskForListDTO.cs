@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.ComponentModel;
+using AutoMapper;
 using TeamWorkMVC.Application.Mapping;
 using Task = TeamWorkMVC.Domain.Models.Task;
 
@@ -10,6 +11,7 @@ public class TaskForListDTO : IMapFrom<Task>
     
     public string Name { get; set; }
     
+    [DisplayName("Project name")]
     public string ProjectName { get; set; }
 
     public void Mapping(Profile profile)

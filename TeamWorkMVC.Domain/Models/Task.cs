@@ -20,7 +20,7 @@ public class Task
     [DefaultValue("false")]
     public bool State { get; set; }
     
-    public virtual Project Project { get; set; }
+    public Project Project { get; set; }
     
     public ICollection<WorkerTask> WorkerTask { get; set; }
     
