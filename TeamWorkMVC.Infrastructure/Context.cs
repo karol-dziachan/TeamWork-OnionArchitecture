@@ -68,6 +68,11 @@ public class Context : IdentityDbContext
             .HasForeignKey(it => it.TaskId)
             .OnDelete(DeleteBehavior.Restrict);
 
+        builder.Entity<AppUser>()
+            .HasOne(a => a.Address)
+            .WithOne(ab => ab.AppUser)
+            .HasForeignKey<Address>(k => k.AppUserId);
+
 
     }
     

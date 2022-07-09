@@ -14,7 +14,7 @@ public class AppUser : IdentityUser
     
     public string? TelephoneNumber { get; set; }
     
-    public ICollection<Address> Address { get; set; }
+    public Address Address { get; set; }
     
     public ICollection<Project> Projects { get; set; }
     

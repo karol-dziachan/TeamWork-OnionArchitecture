@@ -242,6 +242,7 @@ namespace TeamWorkMVC.Web.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AppUserId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Building")
@@ -266,7 +267,8 @@ namespace TeamWorkMVC.Web.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AppUserId");
+                    b.HasIndex("AppUserId")
+                        .IsUnique();
 
                     b.ToTable("Addresses");
                 });
@@ -463,8 +465,10 @@ namespace TeamWorkMVC.Web.Migrations
             modelBuilder.Entity("TeamWorkMVC.Domain.Models.Address", b =>
                 {
                     b.HasOne("TeamWorkMVC.Domain.Models.AppUser", "AppUser")
-                        .WithMany("Address")
-                        .HasForeignKey("AppUserId");
+                        .WithOne("Address")
+                        .HasForeignKey("TeamWorkMVC.Domain.Models.Address", "AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("AppUser");
                 });
@@ -561,7 +565,8 @@ namespace TeamWorkMVC.Web.Migrations
 
             modelBuilder.Entity("TeamWorkMVC.Domain.Models.AppUser", b =>
                 {
-                    b.Navigation("Address");
+                    b.Navigation("Address")
+                        .IsRequired();
 
                     b.Navigation("Comments");
 

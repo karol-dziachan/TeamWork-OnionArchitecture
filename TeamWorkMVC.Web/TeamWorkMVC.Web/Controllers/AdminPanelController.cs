@@ -1,16 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using TeamWorkMVC.Application.DTOs.AppUsers;
 using TeamWorkMVC.Application.InterfacesServices;
 
 namespace TeamWorkMVC.Web.Controllers;
 
+[Authorize(Roles = "Admin")]
 public class AdminPanelController : Controller
 {
     private readonly IUserManagementService _userManagementService;
-
-    public AdminPanelController(IUserManagementService userManagementService)
+    private readonly RoleManager<IdentityRole> _roleManager;
+    public AdminPanelController(IUserManagementService userManagementService,  RoleManager<IdentityRole> roleManager)
     {
         _userManagementService = userManagementService;
+        _roleManager = roleManager;
     }
 
     [HttpGet]
@@ -31,6 +35,21 @@ public class AdminPanelController : Controller
     public IActionResult Edit(UserUpdateDTO model)
     {
         var id = _userManagementService.EditUser(model);
+        return RedirectToAction("Index");
+    }
+
+    [HttpGet]
+    public IActionResult SetUserRole(string id)
+    {
+        var user = _userManagementService.GetUserForEditRole(id);
+        return View(user);
+    }
+
+    [HttpPost]
+    public IActionResult SetUserRole(UserRoleDTO model)
+    {
+
+        var userId = _userManagementService.EditUserRole(model);
         return RedirectToAction("Index");
     }
     

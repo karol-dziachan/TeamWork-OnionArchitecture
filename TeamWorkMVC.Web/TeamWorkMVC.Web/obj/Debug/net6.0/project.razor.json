@@ -16363,6 +16363,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\kurs\\TeamWorkMVCWeb\\TeamWorkMVC.Web\\TeamWorkMVC.Web\\Views\\AdminPanel\\SetUserRole.cshtml",
+      "TargetPath": "Views\\AdminPanel\\SetUserRole.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\kurs\\TeamWorkMVCWeb\\TeamWorkMVC.Web\\TeamWorkMVC.Web\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -16370,6 +16375,11 @@
     {
       "FilePath": "c:\\kurs\\TeamWorkMVCWeb\\TeamWorkMVC.Web\\TeamWorkMVC.Web\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\kurs\\TeamWorkMVCWeb\\TeamWorkMVC.Web\\TeamWorkMVC.Web\\Views\\AdminPanel\\Details.cshtml",
+      "TargetPath": "Views\\AdminPanel\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16413,8 +16423,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\kurs\\TeamWorkMVCWeb\\TeamWorkMVC.Web\\TeamWorkMVC.Web\\Views\\AdminPanel\\Edit.cshtml",
+      "TargetPath": "Views\\AdminPanel\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\kurs\\TeamWorkMVCWeb\\TeamWorkMVC.Web\\TeamWorkMVC.Web\\Views\\Task\\AddTask.cshtml",
       "TargetPath": "Views\\Task\\AddTask.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\kurs\\TeamWorkMVCWeb\\TeamWorkMVC.Web\\TeamWorkMVC.Web\\Views\\AdminPanel\\Index.cshtml",
+      "TargetPath": "Views\\AdminPanel\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

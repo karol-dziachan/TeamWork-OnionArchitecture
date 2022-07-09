@@ -155,18 +155,12 @@ namespace TeamWorkMVC.Web.Areas.Identity.Pages.Account
                     Street = Input.Street, 
                     City = Input.City, 
                     ZipCode = Input.ZipCode,
-                    Country = Input.Country
+                    Country = Input.Country,
+                    AppUserId = user.Id
                 };
+                
 
-                _context.Addresses.Add(address);
-                _context.SaveChanges();
-
-                if (user.Address == null)
-                {
-                    user.Address = new List<Address>();
-                }
-
-                user.Address.Add(address);
+                user.Address = address;
                 
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 

@@ -1,12 +1,14 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TeamWorkMVC.Application.DTOs.AppUsers;
 using TeamWorkMVC.Application.InterfacesServices;
 using TeamWorkMVC.Domain.InterfacesRepository;
 using TeamWorkMVC.Domain.Models;
+using Task = System.Threading.Tasks.Task;
 
 namespace TeamWorkMVC.Application.Services;
 
@@ -14,6 +16,7 @@ public class UserManagementService : UserManager<AppUser>, IUserManagementServic
 {
     private readonly IUserManagementRepository _userManagementRepository;
     private readonly IMapper _mapper;
+    private readonly RoleManager<IdentityRole> _roleManager;
 
     public UserManagementService(
         IUserManagementRepository userManagementRepository, 
@@ -26,11 +29,13 @@ public class UserManagementService : UserManager<AppUser>, IUserManagementServic
         ILookupNormalizer keyNormalizer,
         IdentityErrorDescriber errors,
         IServiceProvider services,
-        ILogger<UserManager<AppUser>> logger) 
+        ILogger<UserManager<AppUser>> logger, 
+        RoleManager<IdentityRole> roleManager) 
         : base(store, optionsAccessor, passwordHasher, userValidators, passwordValidators, keyNormalizer, errors, services, logger)
     {
         _userManagementRepository = userManagementRepository;
         _mapper = mapper;
+        _roleManager = roleManager;
     }
 
     public UserUpdateDTO GetUserForEdit(string id)
@@ -49,25 +54,25 @@ public class UserManagementService : UserManager<AppUser>, IUserManagementServic
         return user.Id;
     }
 
-    public string EditUserRole(string id, RoleDTO role)
+    public string EditUserRole(UserRoleDTO model)
     {
-        var checkRole = CheckRoleExists(role);
+        var checkRole = _userManagementRepository.CheckRoleExists(model.RoleId);
+        var checkHasRole = _userManagementRepository.CheckUserHasRole(model.UserId);
+        var user =_userManagementRepository.GetUserById(model.UserId);
+        
 
         if (checkRole)
         {
-            var roleDTO = _mapper.Map<IdentityRole>(role);
-            _userManagementRepository.EditUserRole(id, roleDTO);
-
-            return id;
+            var res =_userManagementRepository.EditUserRole(model.UserId, model.RoleId);
+            return res;
         }
-        
         return String.Empty;
     }
 
-    public bool CheckRoleExists(RoleDTO model)
+    public bool CheckRoleExists(string id)
     {
-        var roleDTO = _mapper.Map<IdentityRole>(model);
-        bool checkRoleResult = _userManagementRepository.CheckRoleExists(roleDTO);
+      
+        bool checkRoleResult = _userManagementRepository.CheckRoleExists(id);
 
         return checkRoleResult;
     }
@@ -101,5 +106,22 @@ public class UserManagementService : UserManager<AppUser>, IUserManagementServic
         var res = _userManagementRepository.AddRole(roleDTO);
 
         return res;
+    }
+
+    public UserRoleDTO GetUserForEditRole(string id)
+    {
+        var user = _userManagementRepository.GetUserById(id);
+        var userDto = _mapper.Map<UserRoleDTO>(user);
+
+        var userRoleId = _userManagementRepository.GetUserRole(id);
+
+        if (userRoleId == String.Empty)
+        {
+            userRoleId = "";
+        }
+
+        userDto.RoleId = userRoleId;
+
+        return userDto;
     }
 }

@@ -8,9 +8,9 @@ public interface IUserManagementService
     
     string EditUser(UserUpdateDTO model);
 
-    string EditUserRole(string id, RoleDTO role);
+    string EditUserRole(UserRoleDTO model);
 
-    bool CheckRoleExists(RoleDTO model);
+    bool CheckRoleExists(string id);
 
     IQueryable<UserForListDTO> GetAllUsers();
 
@@ -19,4 +19,6 @@ public interface IUserManagementService
     string DeleteUser(string id);
 
     string AddRole(RoleDTO role);
+
+    UserRoleDTO GetUserForEditRole(string id);
 }

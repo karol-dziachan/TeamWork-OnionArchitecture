@@ -13,9 +13,14 @@ public interface IUserManagementRepository
 
     string DeleteItem(string id);
 
-    string EditUserRole(string id, IdentityRole role);
+    string EditUserRole(string userId, string roleId);
     
-    bool CheckRoleExists(IdentityRole role);
+    bool CheckRoleExists(string id);
 
     string AddRole(IdentityRole role);
+
+    string GetUserRole(string id);
+
+    bool CheckUserHasRole(string id);
+
 }

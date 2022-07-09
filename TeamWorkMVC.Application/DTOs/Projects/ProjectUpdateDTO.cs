@@ -14,6 +14,6 @@ public class ProjectUpdateDTO : IMapFrom<Project>
 
     public void Mapping(Profile profile)
     {
-        profile.CreateMap<ProjectUpdateDTO, Project>();
+        profile.CreateMap<ProjectUpdateDTO, Project>().ReverseMap();
     }
 }

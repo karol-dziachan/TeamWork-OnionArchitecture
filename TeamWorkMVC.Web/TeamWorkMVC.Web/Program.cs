@@ -11,13 +11,24 @@ using TeamWorkMVC.Infrastructure.Repositores;
 /*
  * test@gmail.com
  * Karol123!
+ *
+ * Admin:
+ * karol.dziachan@gmail.com
+ * Karol123!
+ * 9621299b-539f-405c-9acd-d97a1a02d411
  */
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'ContextConnection' not found.");
 
 builder.Services.AddDbContext<Context>(options =>
-    options.UseSqlServer(connectionString, b => b.MigrationsAssembly("TeamWorkMVC.Web")));
+    {
+        options.UseSqlServer(connectionString, b => b.MigrationsAssembly("TeamWorkMVC.Web"));
+        options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+    }
+   );
+
+
 
 
 //default

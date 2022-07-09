@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using TeamWorkMVC.Domain.InterfacesRepository;
 using TeamWorkMVC.Domain.Models;
@@ -20,6 +21,7 @@ public class UserManagementRepository : BaseRepository, IUserManagementRepositor
     public AppUser GetUserById(string id)
     {
         var user = _context.AppUsers
+            .Include(p => p.Address)
             .Include(p => p.Projects)
             .Include(p => p.WorkerProject)
             .Include(p => p.WorkerTask)
@@ -30,7 +32,13 @@ public class UserManagementRepository : BaseRepository, IUserManagementRepositor
 
     public string EditItem(AppUser appUser)
     {
-        _context.AppUsers.Update(appUser);
+        var searchUser = _context.AppUsers.FirstOrDefault(i => i.Id == appUser.Id);
+ 
+
+        _context.AppUsers.Remove(searchUser);
+        _context.AppUsers.Add(appUser);
+
+        
         _context.SaveChanges();
         
         return appUser.Id;
@@ -50,23 +58,59 @@ public class UserManagementRepository : BaseRepository, IUserManagementRepositor
         return String.Empty;
     }
 
-    public string EditUserRole(string id, IdentityRole role)
+    public string EditUserRole(string userId, string roleId)
     {
-        
-        var userRole = _context.UserRoles.FirstOrDefault(ur => ur.UserId == id);
+        var userRole = _context.UserRoles.FirstOrDefault(ur => ur.UserId == userId);
+
 
         if (userRole != null)
         {
-            userRole.RoleId = role.Id;
-            return id;
+         
+            /*_context.UserRoles.ToList().RemoveAll( a=> a.RoleId == userRole.RoleId && a.UserId == userRole.UserId);*/
+
+            _context.UserRoles.Remove(userRole);
+            
+            _context.SaveChanges();
+            
+            userRole.RoleId = roleId;
+            _context.UserRoles.Add(userRole);
+            _context.SaveChanges();
+            return roleId;
         }
+
+        var userForNewRole = _context.AppUsers.FirstOrDefault(u => u.Id == userId);
+
+        if (userForNewRole != null)
+        {
+            var newUserRole = new IdentityUserRole<string>
+            {
+                RoleId = roleId, 
+                UserId = userId
+            };
+            
+            _context.UserRoles.Add(newUserRole);
+            _context.SaveChanges();
+
+            return roleId;
+        }
+        
         
         return String.Empty;
     }
+    
 
-    public bool CheckRoleExists(IdentityRole role)
+    public bool CheckRoleExists(string id)
     {
-        return _context.Roles.Contains(role);
+        var role = _context.Roles.FirstOrDefault(i => i.Id == id);
+
+        return role != null;
+    }
+
+    public bool CheckUserHasRole(string id)
+    {
+        var userRole = _context.UserRoles.FirstOrDefault(ur => ur.UserId == id);
+        ;
+        return userRole != null;
     }
 
     public string AddRole(IdentityRole role)
@@ -76,4 +120,19 @@ public class UserManagementRepository : BaseRepository, IUserManagementRepositor
 
         return role.Id;
     }
+
+    public string GetUserRole(string id)
+    {
+        var role = _context.UserRoles.FirstOrDefault(i => i.UserId == id);
+
+        if (role != null)
+        {
+            var roleId = role.RoleId;
+            return roleId;
+        }
+
+        return String.Empty;
+    }
+
+
 }

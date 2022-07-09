@@ -6,7 +6,7 @@ namespace TeamWorkMVC.Application.DTOs.AppUsers;
 
 public class RoleDTO : IMapFrom<IdentityRole>
 {
-    private string Name { get; set; }
+    private string RoleId { get; set; }
 
     public void Mapping(Profile profile)
     {
