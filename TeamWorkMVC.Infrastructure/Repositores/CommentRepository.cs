@@ -50,6 +50,7 @@ public class CommentRepository : BaseRepository, ICommentRepository
         {
             _context.Comments.Remove(comment);
             _context.SaveChanges();
+            return comment.Id;
         }
 
         return -1;

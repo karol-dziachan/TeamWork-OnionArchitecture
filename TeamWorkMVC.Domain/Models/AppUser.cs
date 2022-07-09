@@ -23,4 +23,6 @@ public class AppUser : IdentityUser
     public ICollection<WorkerTask> WorkerTask { get; set; }
     
     public ICollection<Comment> Comments { get; set; }
+
+    
 }
