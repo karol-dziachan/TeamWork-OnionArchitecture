@@ -15,7 +15,7 @@ public class Context : IdentityDbContext
 
     public Context(DbContextOptions options) : base(options)
     {
-        
+    
     }
 
     protected override void OnModelCreating(ModelBuilder builder)
@@ -28,6 +28,11 @@ public class Context : IdentityDbContext
             .HasForeignKey(p => p.AppUserId)
             .IsRequired(false)
             .OnDelete(DeleteBehavior.Restrict);
+
+        builder.Entity<Project>()
+            .HasMany<Task>(s => s.Tasks)
+            .WithOne(x => x.Project)
+            .HasForeignKey(y => y.ProjectId);
 
         
         builder.Entity<WorkerProject>()

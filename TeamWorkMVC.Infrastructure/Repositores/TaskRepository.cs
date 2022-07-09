@@ -1,4 +1,5 @@
-﻿using TeamWorkMVC.Domain.InterfacesRepository;
+﻿using Microsoft.EntityFrameworkCore;
+using TeamWorkMVC.Domain.InterfacesRepository;
 using TeamWorkMVC.Infrastructure.Abstract;
 using Task = TeamWorkMVC.Domain.Models.Task;
 
@@ -24,7 +25,9 @@ public class TaskRepository : BaseRepository, ITaskRepository
 
     public Task GetItemById(int id)
     {
-        var task = _context.Tasks.FirstOrDefault(i => i.Id == id);
+        var task = _context.Tasks
+            .Include(t => t.Project)
+            .FirstOrDefault(i => i.Id == id);
 
         return task;
     }

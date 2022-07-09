@@ -14,9 +14,9 @@ public class Project
     
     public string? AppUserId { get; set; } // Owner
     
-    public virtual AppUser AppUser { get; set; }
+    public AppUser AppUser { get; set; }
     
     public ICollection<WorkerProject> WorkerProject { get; set; }
     
-    public virtual ICollection<Task> Tasks { get; set; }
+    public ICollection<Task> Tasks { get; set; }
 }

@@ -1,4 +1,5 @@
-﻿using TeamWorkMVC.Domain.InterfacesRepository;
+﻿using Microsoft.EntityFrameworkCore;
+using TeamWorkMVC.Domain.InterfacesRepository;
 using TeamWorkMVC.Domain.Models;
 using TeamWorkMVC.Infrastructure.Abstract;
 using Task = TeamWorkMVC.Domain.Models.Task;
@@ -26,7 +27,7 @@ public class ProjectRepository: BaseRepository, IProjectRepository
 
     public Project GetItemById(int id)
     {
-        var project = _context.Projects.FirstOrDefault(i => i.Id == id);
+        var project = _context.Projects.Include(u => u.AppUser).FirstOrDefault(i => i.Id == id);
 
         return project;
     }

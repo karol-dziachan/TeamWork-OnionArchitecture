@@ -351,6 +351,9 @@ namespace TeamWorkMVC.Web.Migrations
                     b.Property<bool>("State")
                         .HasColumnType("bit");
 
+                    b.Property<int>("TaskId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ProjectId");

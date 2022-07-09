@@ -15,10 +15,10 @@ public class Comment
     [Required]
     public int TaskId { get; set; }
     
-    public virtual Task Task { get; set; }    
+    public Task Task { get; set; }    
     
     public string? AppUserId { get; set; }
     
-    public virtual AppUser AppUser { get; set; }
+    public AppUser AppUser { get; set; }
     
 }

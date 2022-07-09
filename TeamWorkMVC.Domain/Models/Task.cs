@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TeamWorkMVC.Domain.Models;
 
@@ -17,12 +18,13 @@ public class Task
     
     public int ProjectId { get; set; }
     
+    [ForeignKey("TaskId")]    
+    public Project Project { get; set; }
+    
     [DefaultValue("false")]
     public bool State { get; set; }
     
-    public Project Project { get; set; }
-    
     public ICollection<WorkerTask> WorkerTask { get; set; }
     
-    public virtual  ICollection<Comment> Comments { get; set; }
+    public  ICollection<Comment> Comments { get; set; }
 }

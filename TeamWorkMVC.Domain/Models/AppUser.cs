@@ -16,7 +16,7 @@ public class AppUser : IdentityUser
     
     public ICollection<Address> Address { get; set; }
     
-    public virtual ICollection<Project> Projects { get; set; }
+    public ICollection<Project> Projects { get; set; }
     
     public ICollection<WorkerProject> WorkerProject { get; set; }
     
