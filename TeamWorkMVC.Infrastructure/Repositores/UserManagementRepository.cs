@@ -65,9 +65,6 @@ public class UserManagementRepository : BaseRepository, IUserManagementRepositor
 
         if (userRole != null)
         {
-         
-            /*_context.UserRoles.ToList().RemoveAll( a=> a.RoleId == userRole.RoleId && a.UserId == userRole.UserId);*/
-
             _context.UserRoles.Remove(userRole);
             
             _context.SaveChanges();

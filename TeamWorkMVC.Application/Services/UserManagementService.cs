@@ -16,7 +16,6 @@ public class UserManagementService : UserManager<AppUser>, IUserManagementServic
 {
     private readonly IUserManagementRepository _userManagementRepository;
     private readonly IMapper _mapper;
-    private readonly RoleManager<IdentityRole> _roleManager;
 
     public UserManagementService(
         IUserManagementRepository userManagementRepository, 
@@ -35,7 +34,6 @@ public class UserManagementService : UserManager<AppUser>, IUserManagementServic
     {
         _userManagementRepository = userManagementRepository;
         _mapper = mapper;
-        _roleManager = roleManager;
     }
 
     public UserUpdateDTO GetUserForEdit(string id)
