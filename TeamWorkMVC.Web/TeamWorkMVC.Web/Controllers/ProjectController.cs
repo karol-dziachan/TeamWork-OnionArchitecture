@@ -39,8 +39,8 @@ public class ProjectController : Controller
     [HttpGet]
     public IActionResult Edit(int id)
     {
-        var task = _projectService.GetProjectForEdit(id);
-        return View(task);
+        var project = _projectService.GetProjectForEdit(id);
+        return View(project);
     }
 
     [HttpPost]
@@ -58,8 +58,8 @@ public class ProjectController : Controller
 
     public IActionResult Details(int id)
     {
-        var task = _projectService.GetProjectById(id);
-        return View(task);
+        var project = _projectService.GetProjectById(id);
+        return View(project);
     }
    
     

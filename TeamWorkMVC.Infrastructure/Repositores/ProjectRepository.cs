@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using TeamWorkMVC.Domain.InterfacesRepository;
 using TeamWorkMVC.Domain.Models;
 using TeamWorkMVC.Infrastructure.Abstract;
@@ -17,6 +18,7 @@ public class ProjectRepository: BaseRepository, IProjectRepository
     {
         _context.Projects.Add(project);
         _context.SaveChanges();
+        
         return project.Id;
     }
 
@@ -36,6 +38,7 @@ public class ProjectRepository: BaseRepository, IProjectRepository
     {
         _context.Projects.Update(model);
         _context.SaveChanges();
+        
         return model.Id;
     }
 
@@ -47,8 +50,9 @@ public class ProjectRepository: BaseRepository, IProjectRepository
         {
             _context.Projects.Remove(project);
             _context.SaveChanges();
+            return project.Id;
         }
 
-        return project.Id;
+        return -1;
     }
 }
