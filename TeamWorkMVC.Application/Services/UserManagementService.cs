@@ -8,7 +8,8 @@ using TeamWorkMVC.Application.DTOs.AppUsers;
 using TeamWorkMVC.Application.InterfacesServices;
 using TeamWorkMVC.Domain.InterfacesRepository;
 using TeamWorkMVC.Domain.Models;
-using Task = System.Threading.Tasks.Task;
+using System.Security.Claims;
+
 
 namespace TeamWorkMVC.Application.Services;
 
@@ -16,6 +17,7 @@ public class UserManagementService : UserManager<AppUser>, IUserManagementServic
 {
     private readonly IUserManagementRepository _userManagementRepository;
     private readonly IMapper _mapper;
+    private readonly SignInManager<AppUser> _signInManager;
 
     public UserManagementService(
         IUserManagementRepository userManagementRepository, 
@@ -29,11 +31,12 @@ public class UserManagementService : UserManager<AppUser>, IUserManagementServic
         IdentityErrorDescriber errors,
         IServiceProvider services,
         ILogger<UserManager<AppUser>> logger, 
-        RoleManager<IdentityRole> roleManager) 
+        SignInManager<AppUser> signInManager) 
         : base(store, optionsAccessor, passwordHasher, userValidators, passwordValidators, keyNormalizer, errors, services, logger)
     {
         _userManagementRepository = userManagementRepository;
         _mapper = mapper;
+        _signInManager = signInManager;
     }
 
     public UserUpdateDTO GetUserForEdit(string id)
@@ -122,4 +125,6 @@ public class UserManagementService : UserManager<AppUser>, IUserManagementServic
 
         return userDto;
     }
+
+    
 }

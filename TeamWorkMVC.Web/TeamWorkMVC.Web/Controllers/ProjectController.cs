@@ -1,16 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TeamWorkMVC.Application.DTOs.Projects;
 using TeamWorkMVC.Application.InterfacesServices;
+using System.Security.Claims;
 
 namespace TeamWorkMVC.Web.Controllers;
 
+[Authorize(Roles = "PM")]
 public class ProjectController : Controller
 {
     private readonly IProjectService _projectService;
+    private readonly IUserManagementService _userManagementService;
 
-    public ProjectController(IProjectService projectService)
+    public ProjectController(IProjectService projectService, IUserManagementService userManagementService)
     {
         _projectService = projectService;
+        _userManagementService = userManagementService;
     }
     
     
@@ -25,7 +30,12 @@ public class ProjectController : Controller
     [Route("Project/Create")]
     public IActionResult AddProject()
     {
-        return View(new ProjectCreateDTO());
+        var projectDTO = new ProjectCreateDTO();
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        projectDTO.AppUserId = userId;
+
+     
+        return View(projectDTO);
     }
 
     [HttpPost]
@@ -40,6 +50,7 @@ public class ProjectController : Controller
     public IActionResult Edit(int id)
     {
         var project = _projectService.GetProjectForEdit(id);
+        project.AppUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
         return View(project);
     }
 

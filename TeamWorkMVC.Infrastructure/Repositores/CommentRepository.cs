@@ -13,6 +13,7 @@ public class CommentRepository : BaseRepository, ICommentRepository
 
     public int AddItem(Comment comment)
     {
+        comment.Id = 0; 
         _context.Comments.Add(comment);
         _context.SaveChanges();
         

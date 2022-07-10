@@ -13,6 +13,7 @@ public class TaskRepository : BaseRepository, ITaskRepository
     }
     public int AddItem(Task task)
     {
+        task.Id = 0;
         _context.Tasks.Add(task);
         _context.SaveChanges();
         return task.Id;
@@ -27,6 +28,8 @@ public class TaskRepository : BaseRepository, ITaskRepository
     {
         var task = _context.Tasks
             .Include(t => t.Project)
+            .Include(c => c.Comments)
+            .Include(c => c.Project)
             .FirstOrDefault(i => i.Id == id);
 
         return task;

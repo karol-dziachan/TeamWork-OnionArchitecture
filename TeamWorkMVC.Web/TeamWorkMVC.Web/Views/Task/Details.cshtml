@@ -49,6 +49,39 @@
          
      
     </dl>
+    
+        <h4>Comments</h4>
+    <hr />
+    
+    @foreach (var comment in Model.Comments)
+    {
+        <dl class="row">
+            <dt class = "col-sm-2">
+                Comment date
+            </dt>
+            <dd class = "col-sm-10">
+                @comment.DateTime
+            </dd>  
+            <dt class = "col-sm-2">
+                Comment content
+            </dt>
+            <dd class = "col-sm-10">
+                @comment.Content
+            </dd>
+            <dt class = "col-sm-2">
+                Actions: 
+            </dt>
+            <dd class = "col-sm-10">
+                          <p> @Html.ActionLink("Edit", "Edit", "Comment", new {  id = comment.Id})</p>  
+                          <p> @Html.ActionLink("Details", "Details", "Comment", new {  id = comment.Id})</p>  
+                          <p> @Html.ActionLink("Delete", "Delete", "Comment", new {  id = comment.Id})</p>  
+            </dd>
+           
+        </dl>
+    }
+
+    
+    @Html.ActionLink("Add coment", "AddComment", "Comment", new {  id = Model.Id })
 </div>
 <div>
     @Html.ActionLink("Edit", "Edit", new {  id = Model.Id  }) |

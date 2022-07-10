@@ -1,16 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using Microsoft.AspNetCore.Mvc;
+using TeamWorkMVC.Application.DTOs.Projects;
 using TeamWorkMVC.Application.DTOs.Tasks;
 using TeamWorkMVC.Application.InterfacesServices;
+using TeamWorkMVC.Domain.Models;
 
 namespace TeamWorkMVC.Web.Controllers;
 
 public class TaskController : Controller
 {
     private readonly ITaskService _taskService;
-
-    public TaskController(ITaskService taskService)
+    private readonly IProjectService _projectService;
+    private readonly IMapper _mapper;
+    public TaskController(ITaskService taskService, IProjectService projectService, IMapper mapper)
     {
         _taskService = taskService;
+        _projectService = projectService;
+        _mapper = mapper;
     }
     
     [HttpGet]
@@ -24,14 +31,33 @@ public class TaskController : Controller
     [Route("Task/Create")]
     public IActionResult AddTask()
     {
-        return View(new TaskCreateDTO());
+        var taskDTO = new TaskCreateDTO();
+        var availableProject = _projectService.GetAllProjectsForList().ProjectTo<ProjectForSelectDTO>(_mapper.ConfigurationProvider);
+
+        taskDTO.AvailableProjects = availableProject;
+        
+        return View(taskDTO);
+    }
+    
+    [HttpGet]
+    [Route("Task/Create/{id}")]
+    public IActionResult AddTask(int id)
+    {
+        var taskDTO = new TaskCreateDTO();
+        var availableProject = _projectService.GetAllProjectsForList().ProjectTo<ProjectForSelectDTO>(_mapper.ConfigurationProvider).Where(i => i.Id == id);
+
+        
+        
+        taskDTO.AvailableProjects = availableProject;
+        
+        return View(taskDTO);
     }
 
     [HttpPost]
-    [Route("Task/Create")]
-    public IActionResult AddTask(TaskCreateDTO model)
+    [Route("Task/Create/{id}")]
+    public IActionResult AddTask(TaskCreateDTO model, int id)
     {
-        var id = _taskService.AddTask(model);
+        var index = _taskService.AddTask(model);
         return RedirectToAction("Index");
     }    
     
@@ -58,6 +84,7 @@ public class TaskController : Controller
     public IActionResult Details(int id)
     {
         var task = _taskService.GetTaskById(id);
+        
         return View(task);
     }
 

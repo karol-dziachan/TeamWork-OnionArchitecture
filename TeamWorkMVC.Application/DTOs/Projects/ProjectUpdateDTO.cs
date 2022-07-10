@@ -11,6 +11,8 @@ public class ProjectUpdateDTO : IMapFrom<Project>
     public string Name { get; set; }
    
     public string? Deadline { get; set; }
+    
+    public string? AppUserId { get; set; }
 
     public void Mapping(Profile profile)
     {

@@ -1,4 +1,5 @@
-﻿@model TeamWorkMVC.Application.DTOs.Tasks.TaskCreateDTO
+﻿@using TeamWorkMVC.Domain.Models
+@model TeamWorkMVC.Application.DTOs.Tasks.TaskCreateDTO
 
 @{
     ViewData["Title"] = "AddTask";
@@ -34,7 +35,13 @@
             </div>
             <div class="form-group">
                 <label asp-for="ProjectId" class="control-label"></label>
-                <input asp-for="ProjectId" class="form-control" />
+               
+                <select asp-for="ProjectId" name="ProjectId">
+                    @foreach (var project in Model.AvailableProjects)
+                    {
+                        <option value="@project.Id">Id: @project.Id, Name: @project.Name</option>
+                    }
+                </select>
                 <span asp-validation-for="ProjectId" class="text-danger"></span>
             </div>
             <div class="form-group form-check">

@@ -22,5 +22,6 @@ public interface IUserManagementRepository
     string GetUserRole(string id);
 
     bool CheckUserHasRole(string id);
+    
 
 }

@@ -1,4 +1,5 @@
 C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Domain\bin\Debug\net6.0\TeamWorkMVC.Domain.deps.json
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Domain\bin\Debug\net6.0\TeamWorkMVC.Domain.runtimeconfig.json
 C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Domain\bin\Debug\net6.0\TeamWorkMVC.Domain.dll
 C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Domain\bin\Debug\net6.0\TeamWorkMVC.Domain.pdb
 C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Domain\obj\Debug\net6.0\TeamWorkMVC.Domain.csproj.AssemblyReference.cache
@@ -9,6 +10,5 @@ C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Domain\obj\Debug\net6.0\TeamWorkMVC.Domain.cs
 C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Domain\obj\Debug\net6.0\TeamWorkMVC.Domain.dll
 C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Domain\obj\Debug\net6.0\refint\TeamWorkMVC.Domain.dll
 C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Domain\obj\Debug\net6.0\TeamWorkMVC.Domain.pdb
-C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Domain\obj\Debug\net6.0\ref\TeamWorkMVC.Domain.dll
-C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Domain\bin\Debug\net6.0\TeamWorkMVC.Domain.runtimeconfig.json
 C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Domain\obj\Debug\net6.0\TeamWorkMVC.Domain.genruntimeconfig.cache
+C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Domain\obj\Debug\net6.0\ref\TeamWorkMVC.Domain.dll

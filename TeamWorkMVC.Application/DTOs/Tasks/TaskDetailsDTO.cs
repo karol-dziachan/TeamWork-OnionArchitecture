@@ -22,10 +22,10 @@ public class TaskDetailsDTO : IMapFrom<Task>
     public Project Project { get; set; }
     
     /*[DisplayName("Workers in task")]
-    public ICollection<WorkerTask> WorkerTask { get; set; }
+    public ICollection<WorkerTask> WorkerTask { get; set; }*/
     
     [DisplayName("Comments in task")]
-    public virtual  ICollection<Comment> Comments { get; set; }*/
+    public  ICollection<Comment> Comments { get; set; }
 
     public void Mapping(Profile profile)
     {
