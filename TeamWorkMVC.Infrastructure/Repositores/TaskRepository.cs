@@ -16,6 +16,7 @@ public class TaskRepository : BaseRepository, ITaskRepository
         task.Id = 0;
         _context.Tasks.Add(task);
         _context.SaveChanges();
+        
         return task.Id;
     }
 

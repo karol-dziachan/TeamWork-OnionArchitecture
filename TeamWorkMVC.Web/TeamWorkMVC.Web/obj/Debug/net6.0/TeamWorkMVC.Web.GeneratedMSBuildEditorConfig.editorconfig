@@ -8,145 +8,145 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TeamWorkMVC.Web
 build_property.RootNamespace = TeamWorkMVC.Web
-build_property.ProjectDir = C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Web\TeamWorkMVC.Web\
+build_property.ProjectDir = c:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Web\TeamWorkMVC.Web\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Web\TeamWorkMVC.Web
+build_property.MSBuildProjectDirectory = c:\kurs\TeamWorkMVCWeb\TeamWorkMVC.Web\TeamWorkMVC.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/Account/Login.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/Account/Register.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/_ViewImports.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/_ViewStart.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/AdminPanel/Details.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/AdminPanel/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/AdminPanel/Edit.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/AdminPanel/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/AdminPanel/Index.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/AdminPanel/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/AdminPanel/SetUserRole.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/AdminPanel/SetUserRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbFxTZXRVc2VyUm9sZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Comment/AddComment.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Comment/AddComment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxBZGRDb21tZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Comment/Details.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Comment/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Comment/Edit.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Comment/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Comment/Index.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Comment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Home/Index.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Home/Privacy.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Project/AddProject.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Project/AddProject.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxBZGRQcm9qZWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Project/Details.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Project/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Project/Edit.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Project/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Project/Index.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Project/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Shared/Error.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Shared/_LoginPartial.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Task/AddTask.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Task/AddTask.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1xBZGRUYXNrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Task/Details.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Task/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Task/Edit.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Task/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Task/Index.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Task/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/_ViewImports.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/_ViewStart.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Shared/_Layout.cshtml]
+[c:/kurs/TeamWorkMVCWeb/TeamWorkMVC.Web/TeamWorkMVC.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-c00qzppmz3

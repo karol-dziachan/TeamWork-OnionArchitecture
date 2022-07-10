@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Identity;
 using TeamWorkMVC.Application.Mapping;
 using TeamWorkMVC.Domain.Models;
 

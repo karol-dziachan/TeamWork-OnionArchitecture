@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using TeamWorkMVC.Application.DTOs.Projects;
 using TeamWorkMVC.Application.DTOs.Tasks;
 using TeamWorkMVC.Application.InterfacesServices;
-using TeamWorkMVC.Domain.Models;
 
 namespace TeamWorkMVC.Web.Controllers;
 
@@ -13,6 +12,7 @@ public class TaskController : Controller
     private readonly ITaskService _taskService;
     private readonly IProjectService _projectService;
     private readonly IMapper _mapper;
+    
     public TaskController(ITaskService taskService, IProjectService projectService, IMapper mapper)
     {
         _taskService = taskService;
@@ -24,6 +24,7 @@ public class TaskController : Controller
     public IActionResult Index()
     {
         var model = _taskService.GetAllTasksForList();
+        
         return View(model);
     }
     
@@ -45,8 +46,6 @@ public class TaskController : Controller
     {
         var taskDTO = new TaskCreateDTO();
         var availableProject = _projectService.GetAllProjectsForList().ProjectTo<ProjectForSelectDTO>(_mapper.ConfigurationProvider).Where(i => i.Id == id);
-
-        
         
         taskDTO.AvailableProjects = availableProject;
         
@@ -58,6 +57,7 @@ public class TaskController : Controller
     public IActionResult AddTask(TaskCreateDTO model, int id)
     {
         var index = _taskService.AddTask(model);
+        
         return RedirectToAction("Index");
     }    
     
@@ -65,6 +65,7 @@ public class TaskController : Controller
     public IActionResult Edit(int id)
     {
         var task = _taskService.GetTaskForEdit(id);
+       
         return View(task);
     }
 
@@ -72,12 +73,14 @@ public class TaskController : Controller
     public IActionResult Edit(TaskUpdateDTO model)
     {
         var id = _taskService.EditTask(model);
+       
         return RedirectToAction("Index");
     }
     
     public IActionResult Delete(int id)
     {
         _taskService.DeleteTask(id);
+        
         return RedirectToAction("Index");
     }
 

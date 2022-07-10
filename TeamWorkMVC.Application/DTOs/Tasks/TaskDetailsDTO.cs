@@ -21,9 +21,6 @@ public class TaskDetailsDTO : IMapFrom<Task>
     [DisplayName("Project name")]
     public Project Project { get; set; }
     
-    /*[DisplayName("Workers in task")]
-    public ICollection<WorkerTask> WorkerTask { get; set; }*/
-    
     [DisplayName("Comments in task")]
     public  ICollection<Comment> Comments { get; set; }
 

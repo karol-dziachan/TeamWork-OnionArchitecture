@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using TeamWorkMVC.Application.DTOs.Projects;
 using TeamWorkMVC.Application.Mapping;
-using TeamWorkMVC.Domain.Models;
 using Task = TeamWorkMVC.Domain.Models.Task;
 
 namespace TeamWorkMVC.Application.DTOs.Tasks;

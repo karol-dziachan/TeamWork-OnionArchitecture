@@ -33,11 +33,9 @@ public class UserManagementRepository : BaseRepository, IUserManagementRepositor
     public string EditItem(AppUser appUser)
     {
         var searchUser = _context.AppUsers.FirstOrDefault(i => i.Id == appUser.Id);
- 
 
         _context.AppUsers.Remove(searchUser);
         _context.AppUsers.Add(appUser);
-
         
         _context.SaveChanges();
         
@@ -61,7 +59,6 @@ public class UserManagementRepository : BaseRepository, IUserManagementRepositor
     public string EditUserRole(string userId, string roleId)
     {
         var userRole = _context.UserRoles.FirstOrDefault(ur => ur.UserId == userId);
-
 
         if (userRole != null)
         {
@@ -91,7 +88,6 @@ public class UserManagementRepository : BaseRepository, IUserManagementRepositor
             return roleId;
         }
         
-        
         return String.Empty;
     }
     
@@ -106,7 +102,7 @@ public class UserManagementRepository : BaseRepository, IUserManagementRepositor
     public bool CheckUserHasRole(string id)
     {
         var userRole = _context.UserRoles.FirstOrDefault(ur => ur.UserId == id);
-        ;
+
         return userRole != null;
     }
 

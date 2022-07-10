@@ -1,14 +1,12 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TeamWorkMVC.Application.DTOs.AppUsers;
 using TeamWorkMVC.Application.InterfacesServices;
 using TeamWorkMVC.Domain.InterfacesRepository;
 using TeamWorkMVC.Domain.Models;
-using System.Security.Claims;
 
 
 namespace TeamWorkMVC.Application.Services;
@@ -58,21 +56,18 @@ public class UserManagementService : UserManager<AppUser>, IUserManagementServic
     public string EditUserRole(UserRoleDTO model)
     {
         var checkRole = _userManagementRepository.CheckRoleExists(model.RoleId);
-        var checkHasRole = _userManagementRepository.CheckUserHasRole(model.UserId);
-        var user =_userManagementRepository.GetUserById(model.UserId);
-        
 
         if (checkRole)
         {
             var res =_userManagementRepository.EditUserRole(model.UserId, model.RoleId);
             return res;
         }
+        
         return String.Empty;
     }
 
     public bool CheckRoleExists(string id)
     {
-      
         bool checkRoleResult = _userManagementRepository.CheckRoleExists(id);
 
         return checkRoleResult;
@@ -113,7 +108,6 @@ public class UserManagementService : UserManager<AppUser>, IUserManagementServic
     {
         var user = _userManagementRepository.GetUserById(id);
         var userDto = _mapper.Map<UserRoleDTO>(user);
-
         var userRoleId = _userManagementRepository.GetUserRole(id);
 
         if (userRoleId == String.Empty)

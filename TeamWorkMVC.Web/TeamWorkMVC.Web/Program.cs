@@ -16,6 +16,10 @@ using TeamWorkMVC.Infrastructure.Repositores;
  * karol.dziachan@gmail.com
  * Karol123!
  * 9621299b-539f-405c-9acd-d97a1a02d411
+ *
+ * PM:
+ * pm@test.pl
+ * Karol123!
  */
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,9 +32,6 @@ builder.Services.AddDbContext<Context>(options =>
     }
    );
 
-
-
-
 //default
 builder.Services.AddDefaultIdentity<AppUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddRoles<IdentityRole>()
@@ -38,28 +39,6 @@ builder.Services.AddDefaultIdentity<AppUser>(options => options.SignIn.RequireCo
     .AddEntityFrameworkStores<Context>();
 
 builder.Services.AddScoped<UserManager<AppUser>>();
-
-// Add services to the container.
-/*var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<Context>(options =>
-    options.UseSqlServer(connectionString, b => b.MigrationsAssembly("TeamWorkMVC.Web")));
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();*/
-
-/*
-builder.Services.AddDefaultIdentity<AppUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddUserManager<UserManagementService>()
-    .AddEntityFrameworkStores<Context>();
-    */
-
-
-/*
-builder.Services.AddIdentity<IdentityUser<AppUser>, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false)
-    .AddEntityFrameworkStores<Context>()
-    .AddUserManager<UserManagementService>() // Add ApplicationUserManager
-    .AddDefaultTokenProviders()
-    .AddDefaultUI();*/
-
-/*builder.Services.AddIdentity<UserManagementService, IdentityRole>();*/
 
 builder.Services.AddControllersWithViews();
 
@@ -76,8 +55,6 @@ builder.Services.AddTransient<ICommentService, CommentService>();
 
 builder.Services.AddTransient<IUserManagementRepository, UserManagementRepository>();
 builder.Services.AddTransient<IUserManagementService, UserManagementService>();
-
-/*builder.Services.AddIdentity<IdentityUser, UserManagementService>().AddEntityFrameworkStores<Context>();*/
 
 builder.Services.AddRazorPages();
 

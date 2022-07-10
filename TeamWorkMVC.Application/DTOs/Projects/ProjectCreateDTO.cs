@@ -19,6 +19,5 @@ public class ProjectCreateDTO : IMapFrom<Project>
     public void Mapping(Profile profile)
     {
         profile.CreateMap<ProjectCreateDTO, Project>();
-        /*.ForMember(i => i.AppUserId, opt => opt.Ignore());*/
     }
 }

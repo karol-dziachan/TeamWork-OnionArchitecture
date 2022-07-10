@@ -11,9 +11,13 @@ public class Context : IdentityDbContext
     public DbSet<AppUser> AppUsers { get; set; }
     
     public DbSet<Comment> Comments { get; set; }
+    
     public DbSet<Project> Projects { get; set; }
+    
     public DbSet<Task> Tasks { get; set; }
+    
     public DbSet<WorkerProject> WorkerProject { get; set; }
+    
     public DbSet<WorkerTask> WorkerTask { get; set; }
 
     public Context(DbContextOptions options) : base(options)
@@ -36,7 +40,6 @@ public class Context : IdentityDbContext
             .HasMany<Task>(s => s.Tasks)
             .WithOne(x => x.Project)
             .HasForeignKey(y => y.ProjectId);
-
         
         builder.Entity<WorkerProject>()
             .HasKey(it => new {it.AppUserId, it.ProjectId});
@@ -72,8 +75,6 @@ public class Context : IdentityDbContext
             .HasOne(a => a.Address)
             .WithOne(ab => ab.AppUser)
             .HasForeignKey<Address>(k => k.AppUserId);
-
-
     }
     
 }

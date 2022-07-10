@@ -21,6 +21,4 @@ public interface IUserManagementService
     string AddRole(RoleDTO role);
 
     UserRoleDTO GetUserForEditRole(string id);
-
-
 }

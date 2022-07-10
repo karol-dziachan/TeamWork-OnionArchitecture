@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using TeamWorkMVC.Application.DTOs.Tasks;
 using TeamWorkMVC.Application.Mapping;
 
 namespace TeamWorkMVC.Application.DTOs.Projects;
